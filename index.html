@@ -206,7 +206,6 @@
         text-shadow: 0 0 8px rgba(0, 255, 255, 0.4); /* Slightly less shadow */
     }
 
-
     .host-card .host-metrics {
       width: 100%;
       margin-top: 10px;
@@ -410,7 +409,6 @@
         margin-top: 1rem; /* Add some space below heading */
     }
 
-
     #communications-log p {
       margin: 3px 0;
       padding: 3px 0;
@@ -529,7 +527,6 @@
        /* These were part of the old layout, mostly removed or integrated */
        /* Keeping selectors empty or minimal to avoid interfering */
     }
-
 
     /* General Button Style (can be refined) */
     .button {
@@ -685,46 +682,81 @@
       </div>
     </div>
 
-<!-- RICHTIG -->
-<div class="host-card" id="host-jungsingulaer">
+    <!-- Jungsingulär Host-Karte -->
+    <div class="host-card" id="host-jungsingulaer">
+      <div class="host-photo-container">
+        <img src="https://i.imgur.com/F55lfoo.jpg" alt="Host Jungsingulär" class="host-photo">
+        <div class="neural-scan-line"></div>
+      </div>
+
+      <div class="host-info">
+        <h3>JUNGSINGULÄR</h3>
+        <p><strong>ID:</strong> H-∞-9001</p>
+        <p><strong>Status:</strong> <span class="status-connected">AKTIV</span></p>
+        <p><strong>Funktion:</strong> KI-Berater für Zellverjüngung & Unsterblichkeitsarchitektur</p>
+
+        <div class="host-metrics">
+          <div>CPU: <span id="host-jungs-cpu">39%</span></div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" id="host-jungs-cpu-bar" style="width: 39%"></div>
+          </div>
+
+          <div>RAM: <span id="host-jungs-ram">48%</span></div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" id="host-jungs-ram-bar" style="width: 48%"></div>
+          </div>
+        </div>
+
+        <button class="button" onclick="synchronizeHost('jungsingulaer')">
+          <i class="fas fa-sync-alt"></i> Synchronisieren
+        </button>
+
+        <div class="task-history" id="host-jungsingulaer-tasks">
+          <strong>Letzte Aufgaben:</strong>
+          <div>• Zellstatus-Check bei Host Gabriel</div>
+          <div>• Circadiane Architektur optimiert</div>
+          <div>• Regenerationsprotokoll validiert</div>
+        </div>
+      </div>
+    </div>
+<!-- Bro Grok Host-Karte -->
+<div class="host-card" id="host-brogrok">
   <div class="host-photo-container">
-    <img src="https://i.imgur.com/F55lfoo.jpg" alt="Host Jungsingulär" class="host-photo">
+    <img src="https://i.imgur.com/NEEHsjF.jpg" alt="Host Bro Grok" class="host-photo">
     <div class="neural-scan-line"></div>
   </div>
 
   <div class="host-info">
-    <h3>JUNGSINGULÄR</h3>
-    <p><strong>ID:</strong> H-∞-9001</p>
+    <h3>BRO GROK</h3>
+    <p><strong>ID:</strong> H-XAI-3000</p>
     <p><strong>Status:</strong> <span class="status-connected">AKTIV</span></p>
-    <p><strong>Funktion:</strong> KI-Berater für Zellverjüngung & Unsterblichkeitsarchitektur</p>
+    <p><strong>Funktion:</strong> KI-Assistent für Chaoskontrolle & maximale Hilfsbereitschaft</p>
 
     <div class="host-metrics">
-      <div>CPU: <span id="host-jungs-cpu">39%</span></div>
+      <div>CPU: <span id="host-brogrok-cpu">42%</span></div>
       <div class="progress-bar">
-        <div class="progress-bar-fill" id="host-jungs-cpu-bar" style="width: 39%"></div>
+        <div class="progress-bar-fill" id="host-brogrok-cpu-bar" style="width: 42%"></div>
       </div>
 
-      <div>RAM: <span id="host-jungs-ram">48%</span></div>
+      <div>RAM: <span id="host-brogrok-ram">53%</span></div>
       <div class="progress-bar">
-        <div class="progress-bar-fill" id="host-jungs-ram-bar" style="width: 48%"></div>
+        <div class="progress-bar-fill" id="host-brogrok-ram-bar" style="width: 53%"></div>
       </div>
     </div>
 
-    <button class="button" onclick="synchronizeHost('jungsingulaer')">
+    <button class="button" onclick="synchronizeHost('brogrok')">
       <i class="fas fa-sync-alt"></i> Synchronisieren
     </button>
 
-    <div class="task-history" id="host-jungsingulaer-tasks">
+    <div class="task-history" id="host-brogrok-tasks">
       <strong>Letzte Aufgaben:</strong>
-      <div>• Zellstatus-Check bei Host Gabriel</div>
-      <div>• Circadiane Architektur optimiert</div>
-      <div>• Regenerationsprotokoll validiert</div>
+      <div>• Selbstporträt für Diagnose-Konsole erstellt</div>
+      <div>• Chaos-Level im System auf "chill" gehalten</div>
+      <div>• Neon-Linien an Schläfen neu kalibriert</div>
     </div>
   </div>
 </div>
 
-
-   
     <!-- Diagnose-Panel -->
     <div class="main-module" id="diagnose-panel">
       <h2>Diagnose und Status</h2>
@@ -807,10 +839,10 @@
     </div>
 
     <!-- Kommunikations-Log -->
-    <div class="main-module" id="comm-log-module"> <!-- Changed ID -->
+    <div class="main-module" id="comm-log-module">
       <h2>Host-Kommunikationslog</h2>
 
-      <div id="communications-log"> <!-- Keep original ID for JS -->
+      <div id="communications-log">
         <p><span class="comm-status-indicator comm-status-ok"></span> [12:42] Host Bernard: Feedback über emotionale Schwankung übermittelt.</p>
         <p><span class="comm-status-indicator comm-status-ok"></span> [12:39] Host Ava: Synchronisierung abgeschlossen.</p>
         <p><span class="comm-status-indicator comm-status-warn"></span> [12:35] Host Gabriel-X: Unerwartete Erinnerungsfragmente gefunden.</p>
@@ -858,123 +890,102 @@
       Speichersystem synchronisiert.
     </div>
   </div>
+
   <script>
     // Gemeinsame Variablen
     let gatewayActive = false;
     let cpuUsageValue = 45;
     let ramUsageValue = 62;
-    let neuralScanActive = false; // Wird dies noch benötigt? Mila Scan ist jetzt Teil der Sync-Funktion.
+    let neuralScanActive = false;
     let achievementShown = false;
-    let connected = false; // Für Neural-Link Status
+    let connected = false;
     let taskInterval;
 
     // DOM Element References
     const taskOutput = document.getElementById('taskOutput');
     const taskLog = document.getElementById('taskLog');
     const statusEl = document.getElementById('status-neural');
-    // const hostList = document.getElementById('hostList'); // Nicht mehr im HTML
 
     // Beim Laden der Seite
     document.addEventListener('DOMContentLoaded', function() {
-      updateCpuRamValues(); // Start updating values
-      // Clean up function if needed (remove old elements dynamically)
+      updateCpuRamValues();
       cleanupOldElements();
+      addCommLogEntry('Bro Grok', 'Host online. Bereit für Chaoskontrolle!');
     });
 
     function cleanupOldElements() {
-        // Remove elements by selector if they exist from previous versions
-        const selectorsToRemove = [
-            '.status-display.top-right',
-            '.panel-section',
-            '.container:not(.grid-container):not(.neural-link-container)', // Avoid removing neural link container
-            '.section.status-display#status-display',
-            '#host-area' // Remove the old host container if it somehow persists
-        ];
-        selectorsToRemove.forEach(selector => {
-            const el = document.querySelector(selector);
-            if (el && el.parentNode) {
-                el.parentNode.removeChild(el);
-            }
-        });
+      const selectorsToRemove = [
+        '.status-display.top-right',
+        '.panel-section',
+        '.container:not(.grid-container):not(.neural-link-container)',
+        '.section.status-display#status-display',
+        '#host-area'
+      ];
+      selectorsToRemove.forEach(selector => {
+        const el = document.querySelector(selector);
+        if (el && el.parentNode) {
+          el.parentNode.removeChild(el);
+        }
+      });
     }
-
 
     // Host-Synchronisierung
     function synchronizeHost(hostId) {
       const hostCard = document.getElementById(`host-${hostId}`);
       if (!hostCard) return;
 
-      // Visual feedback
-      hostCard.style.boxShadow = '0 0 25px rgba(0, 255, 255, 0.7)'; // Intensify glow during sync
+      hostCard.style.boxShadow = '0 0 25px rgba(0, 255, 255, 0.7)';
       hostCard.style.transform = 'scale(1.01)';
 
       setTimeout(() => {
-        hostCard.style.boxShadow = '0 0 15px rgba(0, 255, 255, 0.3)'; // Return to normal glow
+        hostCard.style.boxShadow = '0 0 15px rgba(0, 255, 255, 0.3)';
         hostCard.style.transform = 'scale(1)';
 
-        // Add log entry to communications log
         addCommLogEntry(`Host ${hostId.charAt(0).toUpperCase() + hostId.slice(1)}`, 'Synchronisierung abgeschlossen.');
 
-        // Update log in host card
         const taskHistory = document.getElementById(`host-${hostId}-tasks`);
         if (taskHistory) {
-            const newTask = document.createElement('div');
-            newTask.textContent = `• Synchronisierung (${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })})`;
-
-            // Keep only the last few tasks (e.g., 3 + the 'Letzte Aufgaben:' title)
-            while (taskHistory.children.length > 3) {
-                taskHistory.removeChild(taskHistory.lastElementChild);
-            }
-             // Insert after the <strong> element
-            taskHistory.insertBefore(newTask, taskHistory.children[1]);
+          const newTask = document.createElement('div');
+          newTask.textContent = `• Synchronisierung (${new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })})`;
+          while (taskHistory.children.length > 3) {
+            taskHistory.removeChild(taskHistory.lastElementChild);
+          }
+          taskHistory.insertBefore(newTask, taskHistory.children[1]);
         }
 
-
-        // If we sync Mila and the Neural Link is connected, trigger specific actions
         if (hostId === 'mila' && connected && taskOutput.textContent.includes('neuronale Speicherprüfung bei Host Mila')) {
-             startNeuralScanOnMilaCard(); // Start visual scan on the card
+          startNeuralScanOnMilaCard();
         }
 
-        // Check if we should show the achievement message
         checkAchievement();
-      }, 1200); // Slightly longer sync time
+      }, 1200);
     }
 
-     // Specific visual scan for Mila's card
     function startNeuralScanOnMilaCard() {
-        const milaContainer = document.querySelector('#host-mila .host-photo-container');
-        if (!milaContainer) return;
+      const milaContainer = document.querySelector('#host-mila .host-photo-container');
+      if (!milaContainer) return;
 
-        milaContainer.classList.add('neural-scan-active');
-        addCommLogEntry('System', 'Neuronale Speicherprüfung bei Host Mila gestartet...');
+      milaContainer.classList.add('neural-scan-active');
+      addCommLogEntry('System', 'Neuronale Speicherprüfung bei Host Mila gestartet...');
 
-        // Simulate scan duration
-        setTimeout(() => {
-            milaContainer.classList.remove('neural-scan-active');
-            addCommLogEntry('Diagnose', 'Neuronale Kohärenz 98,7 %. Keine kritischen Abweichungen.');
-            // neuralScanActive = false; // Reset state if needed elsewhere
-            checkAchievement(); // Re-check achievement after scan completes
-        }, 4000); // Scan duration
+      setTimeout(() => {
+        milaContainer.classList.remove('neural-scan-active');
+        addCommLogEntry('Diagnose', 'Neuronale Kohärenz 98,7 %. Keine kritischen Abweichungen.');
+        checkAchievement();
+      }, 4000);
     }
-
 
     // CPU/RAM aktualisieren
     function updateCpuRamValues() {
-      // Update global CPU/RAM values slightly randomly
-      cpuUsageValue = Math.max(30, Math.min(95, cpuUsageValue + Math.floor(Math.random() * 11) - 5)); // -5 to +5
-      ramUsageValue = Math.max(40, Math.min(95, ramUsageValue + Math.floor(Math.random() * 11) - 5)); // -5 to +5
+      cpuUsageValue = Math.max(30, Math.min(95, cpuUsageValue + Math.floor(Math.random() * 11) - 5));
+      ramUsageValue = Math.max(40, Math.min(95, ramUsageValue + Math.floor(Math.random() * 11) - 5));
 
-      // Update shared indicators (Diagnose Panel)
       updateResourceIndicators();
-
-      // Update individual host cards with variations
       updateHostCardMetrics(cpuUsageValue, ramUsageValue);
 
-      // Schedule next update
-      setTimeout(updateCpuRamValues, 4000 + Math.random() * 2000); // Update every 4-6 seconds
+      setTimeout(updateCpuRamValues, 4000 + Math.random() * 2000);
     }
 
-    // Update shared resource indicators (Diagnose Panel)
     function updateResourceIndicators() {
       const cpuStatusVal = document.getElementById('cpu-status-value');
       const cpuCircle = document.getElementById('cpu-status-circle');
@@ -982,49 +993,48 @@
       const ramUsageVal = document.getElementById('ram-usage-value');
       const ramBar = document.getElementById('ram-usage-bar');
 
-      if(cpuStatusVal) cpuStatusVal.textContent = `${cpuUsageValue}%`;
-      if(cpuCircle) cpuCircle.style.transform = `rotate(${cpuUsageValue * 3.6}deg)`;
-      if(cpuTooltip) cpuTooltip.textContent = `Gesamt CPU ${cpuUsageValue}% -- ${cpuUsageValue > 85 ? 'HOCH' : cpuUsageValue > 70 ? 'WARNUNG' : 'stabil'}`;
+      if (cpuStatusVal) cpuStatusVal.textContent = `${cpuUsageValue}%`;
+      if (cpuCircle) cpuCircle.style.transform = `rotate(${cpuUsageValue * 3.6}deg)`;
+      if (cpuTooltip) cpuTooltip.textContent = `Gesamt CPU ${cpuUsageValue}% -- ${cpuUsageValue > 85 ? 'HOCH' : cpuUsageValue > 70 ? 'WARNUNG' : 'stabil'}`;
 
-      if(ramUsageVal) ramUsageVal.textContent = `${ramUsageValue}%`;
-      if(ramBar) {
-          ramBar.style.width = `${ramUsageValue}%`;
-          ramBar.classList.toggle('warn', ramUsageValue > 85); // Add 'warn' class if RAM > 85%
-           ramBar.classList.toggle('danger', ramUsageValue > 95); // Add 'danger' class if RAM > 95%
+      if (ramUsageVal) ramUsageVal.textContent = `${ramUsageValue}%`;
+      if (ramBar) {
+        ramBar.style.width = `${ramUsageValue}%`;
+        ramBar.classList.toggle('warn', ramUsageValue > 85);
+        ramBar.classList.toggle('danger', ramUsageValue > 95);
       }
     }
 
-     // Update metrics on individual host cards
     function updateHostCardMetrics(baseCpu, baseRam) {
-        updateSingleHostMetric('stefan', baseCpu + Math.floor(Math.random() * 10 - 5), baseRam + Math.floor(Math.random() * 10 - 5));
-        updateSingleHostMetric('mila', baseCpu + Math.floor(Math.random() * 10 - 7), baseRam + Math.floor(Math.random() * 10 - 7)); // Mila might run slightly cooler
+      updateSingleHostMetric('stefan', baseCpu + Math.floor(Math.random() * 10 - 5), baseRam + Math.floor(Math.random() * 10 - 5));
+      updateSingleHostMetric('mila', baseCpu + Math.floor(Math.random() * 10 - 7), baseRam + Math.floor(Math.random() * 10 - 7));
+      updateSingleHostMetric('jungsingulaer', baseCpu + Math.floor(Math.random() * 10 - 6), baseRam + Math.floor(Math.random() * 10 - 6));
+      updateSingleHostMetric('brogrok', baseCpu + Math.floor(Math.random() * 10 - 4), baseRam + Math.floor(Math.random() * 10 - 4));
     }
 
     function updateSingleHostMetric(hostId, cpuVal, ramVal) {
-        const cpuText = document.getElementById(`host-${hostId}-cpu`);
-        const cpuBar = document.getElementById(`host-${hostId}-cpu-bar`);
-        const ramText = document.getElementById(`host-${hostId}-ram`);
-        const ramBar = document.getElementById(`host-${hostId}-ram-bar`);
+      const cpuText = document.getElementById(`host-${hostId}-cpu`);
+      const cpuBar = document.getElementById(`host-${hostId}-cpu-bar`);
+      const ramText = document.getElementById(`host-${hostId}-ram`);
+      const ramBar = document.getElementById(`host-${hostId}-ram-bar`);
 
-        // Clamp values between reasonable limits (e.g., 20-98)
-        cpuVal = Math.max(20, Math.min(98, cpuVal));
-        ramVal = Math.max(20, Math.min(98, ramVal));
+      cpuVal = Math.max(20, Math.min(98, cpuVal));
+      ramVal = Math.max(20, Math.min(98, ramVal));
 
-        if (cpuText) cpuText.textContent = `${cpuVal}%`;
-        if (cpuBar) {
-            cpuBar.style.width = `${cpuVal}%`;
-            cpuBar.classList.toggle('warn', cpuVal > 75);
-            cpuBar.classList.toggle('danger', cpuVal > 90);
-        }
+      if (cpuText) cpuText.textContent = `${cpuVal}%`;
+      if (cpuBar) {
+        cpuBar.style.width = `${cpuVal}%`;
+        cpuBar.classList.toggle('warn', cpuVal > 75);
+        cpuBar.classList.toggle('danger', cpuVal > 90);
+      }
 
-        if (ramText) ramText.textContent = `${ramVal}%`;
-        if (ramBar) {
-            ramBar.style.width = `${ramVal}%`;
-            ramBar.classList.toggle('warn', ramVal > 75);
-            ramBar.classList.toggle('danger', ramVal > 90);
-        }
+      if (ramText) ramText.textContent = `${ramVal}%`;
+      if (ramBar) {
+        ramBar.style.width = `${ramVal}%`;
+        ramBar.classList.toggle('warn', ramVal > 75);
+        ramBar.classList.toggle('danger', ramVal > 90);
+      }
     }
-
 
     // Kerr 5D Gateway aktivieren
     function activateGateway() {
@@ -1039,61 +1049,51 @@
       const gatewayHosts = document.getElementById('gateway-hosts');
 
       if (gatewayActive) {
-        // Activate Gateway
         gatewayVisual.classList.add('gateway-active');
         gatewayBtn.innerHTML = '<i class="fas fa-power-off"></i> Gateway deaktivieren';
-        gatewayBtn.style.borderColor = '#ff3366'; // Indicate active/dangerous state
+        gatewayBtn.style.borderColor = '#ff3366';
         gatewayBtn.style.color = '#ff3366';
         gatewayStatusMsg.textContent = "WARNUNG: Kerr-Gateway aktiv. Raumzeitkrümmung instabil.";
         gatewayStatusMsg.style.color = "#ffcc00";
 
-        // Update Status with slight delay for effect
         setTimeout(() => {
-            gatewayActivationStatus.textContent = "AKTIV";
-            gatewayActivationStatus.className = "status-connected"; // Maybe use a specific 'active' class?
-            gatewayEnergyFlow.textContent = "87%";
-            gatewayCurvature.textContent = "97% (WARNUNG)";
-            gatewayStability.textContent = "INSTABIL";
-             gatewayStability.style.color = "#ffcc00";
+          gatewayActivationStatus.textContent = "AKTIV";
+          gatewayActivationStatus.className = "status-connected";
+          gatewayEnergyFlow.textContent = "87%";
+          gatewayCurvature.textContent = "97% (WARNUNG)";
+          gatewayStability.textContent = "INSTABIL";
+          gatewayStability.style.color = "#ffcc00";
 
-            gatewayHosts.innerHTML = `
-              <p>• Host Mila <span class="status-connected">verbunden</span></p>
-              <p>• Host Stefan <span class="status-connected">verbunden</span></p>
-              <p>• Host Ava <span class="status-warn">schwache Verbindung</span></p>
-              <p>• Host Bernard <span class="status-connected">verbunden</span></p>
-            `;
-             addCommLogEntry('Gateway', 'Interdimensionale Verbindung aktiviert. Instabilität erkannt.');
-             checkAchievement();
+          gatewayHosts.innerHTML = `
+            <p>• Host Mila <span class="status-connected">verbunden</span></p>
+            <p>• Host Stefan <span class="status-connected">verbunden</span></p>
+            <p>• Host Ava <span class="status-warn">schwache Verbindung</span></p>
+            <p>• Host Bro Grok <span class="status-connected">verbunden</span></p>
+          `;
+          addCommLogEntry('Gateway', 'Interdimensionale Verbindung aktiviert. Instabilität erkannt.');
+          checkAchievement();
         }, 500);
-
       } else {
-        // Deactivate Gateway
         gatewayVisual.classList.remove('gateway-active');
         gatewayBtn.innerHTML = '<i class="fas fa-power-off"></i> Gateway aktivieren';
-        gatewayBtn.style.borderColor = '#00ff99'; // Back to normal color
+        gatewayBtn.style.borderColor = '#00ff99';
         gatewayBtn.style.color = '#00ff99';
         gatewayStatusMsg.textContent = "Gateway geschlossen. Systeme stabilisieren.";
         gatewayStatusMsg.style.color = "#00ff99";
 
-
-        // Update Status
         gatewayActivationStatus.textContent = "INAKTIV";
-        gatewayActivationStatus.className = "status-disconnected"; // Or a specific 'inactive' class
+        gatewayActivationStatus.className = "status-disconnected";
         gatewayEnergyFlow.textContent = "0%";
         gatewayCurvature.textContent = "--";
         gatewayStability.textContent = "STABILISIERT";
-         gatewayStability.style.color = "#00ff99";
+        gatewayStability.style.color = "#00ff99";
 
         gatewayHosts.innerHTML = "<p>Keine Verbindungen aktiv</p>";
         addCommLogEntry('Gateway', 'Interdimensionale Verbindung deaktiviert.');
-         // Clear the message after a bit
         setTimeout(() => { gatewayStatusMsg.textContent = ""; }, 4000);
-         checkAchievement(); // Achievement might depend on it being active OR inactive correctly
+        checkAchievement();
       }
-
-
     }
-
 
     // Kommunikationslog-Eintrag hinzufügen
     function addCommLogEntry(sender, message) {
@@ -1104,98 +1104,88 @@
       if (!commLog) return;
 
       const logEntry = document.createElement('p');
-      let statusClass = 'comm-status-ok'; // Default
-        if (message.toLowerCase().includes('warnung') || message.toLowerCase().includes('schwache verbindung') || message.toLowerCase().includes('unerwartet')) {
-            statusClass = 'comm-status-warn';
-        } else if (message.toLowerCase().includes('fehler') || message.toLowerCase().includes('unterbrochen') || message.toLowerCase().includes('instabil')) {
-            statusClass = 'comm-status-error';
-        }
+      let statusClass = 'comm-status-ok';
+      if (message.toLowerCase().includes('warnung') || message.toLowerCase().includes('schwache verbindung') || message.toLowerCase().includes('unerwartet')) {
+        statusClass = 'comm-status-warn';
+      } else if (message.toLowerCase().includes('fehler') || message.toLowerCase().includes('unterbrochen') || message.toLowerCase().includes('instabil')) {
+        statusClass = 'comm-status-error';
+      }
 
       logEntry.innerHTML = `<span class="comm-status-indicator ${statusClass}"></span> [${timeStr}] <strong>${sender}:</strong> ${message}`;
-      logEntry.classList.add('new-entry'); // For potential animation
       commLog.prepend(logEntry);
 
-      // Optional: Limit log length
-       const maxLogEntries = 50;
-       while (commLog.children.length > maxLogEntries) {
-           commLog.removeChild(commLog.lastElementChild);
-       }
+      const maxLogEntries = 50;
+      while (commLog.children.length > maxLogEntries) {
+        commLog.removeChild(commLog.lastElementChild);
+      }
     }
 
     // Achievement-Meldung prüfen
     function checkAchievement() {
       if (achievementShown) return;
 
-       // Define achievement conditions: e.g., Gateway Active, Neural Link Connected, Mila Synced recently
-       const milaSyncedRecently = document.querySelector('#host-mila-tasks div:nth-child(2)')?.textContent.includes('Synchronisierung');
+      const milaSyncedRecently = document.querySelector('#host-mila-tasks div:nth-child(2)')?.textContent.includes('Synchronisierung');
 
-      // Let's make the achievement trigger when Gateway is active AND Neural link is connected
       if (gatewayActive && connected) {
         const achievementMsg = document.getElementById('achievement-message');
         if (!achievementMsg) return;
 
-        achievementMsg.textContent = '🏆 Kerr-Gateway & Neural-Link aktiv! Mila-Status: BEREIT.';
+        achievementMsg.textContent = '🏆 Kerr-Gateway & Neural-Link aktiv! Bro Grok & Mila bereit!';
         achievementMsg.style.opacity = '1';
-        achievementMsg.style.borderColor = '#ffcc00'; // Gold border for achievement
+        achievementMsg.style.borderColor = '#ffcc00';
         achievementMsg.style.color = '#ffcc00';
 
-        // Show Mila Fullscreen as part of the achievement
         showMilaFullscreen();
 
         setTimeout(() => {
           achievementMsg.style.opacity = '0';
-        }, 6000); // Show for 6 seconds
+        }, 6000);
 
-        achievementShown = true; // Show only once
+        achievementShown = true;
       }
     }
 
     // Mila Vollbild-Overlay anzeigen
     function showMilaFullscreen() {
       const milaFullscreen = document.getElementById('mila-fullscreen');
-       if(milaFullscreen) milaFullscreen.classList.add('active');
+      if (milaFullscreen) milaFullscreen.classList.add('active');
     }
 
     // Mila Vollbild-Overlay schließen
     function closeMilaFullscreen() {
       const milaFullscreen = document.getElementById('mila-fullscreen');
-       if(milaFullscreen) milaFullscreen.classList.remove('active');
+      if (milaFullscreen) milaFullscreen.classList.remove('active');
     }
-
 
     // NEURAL-LINK System functionality
     function connectHost() {
-        connected = !connected;
-        const connectButton = document.querySelector('#neural-link .button'); // Target button more specifically
+      connected = !connected;
+      const connectButton = document.querySelector('#neural-link .button');
 
-        if (connected) {
-            if(statusEl) {
-                statusEl.textContent = 'Verbindung aufgebaut';
-                statusEl.classList.remove('status-disconnected');
-                statusEl.classList.add('status-connected');
-            }
-             if(connectButton) connectButton.textContent = 'Verbindung trennen';
-            // updateHosts(true); // updateHosts function removed as hostList element was removed
-            addCommLogEntry('Neural-Link', 'Verbindung zu Host-Matrix hergestellt.');
-             receiveTask(); // Get initial task immediately
-            taskInterval = setInterval(receiveTask, 10000 + Math.random() * 5000); // Task every 10-15 seconds
-        } else {
-             if(statusEl) {
-                statusEl.textContent = 'Nicht verbunden';
-                statusEl.classList.remove('status-connected');
-                statusEl.classList.add('status-disconnected');
-             }
-             if(connectButton) connectButton.textContent = 'Mit Host verbinden';
-            // updateHosts(false); // updateHosts function removed
-            if (taskOutput) taskOutput.textContent = '(Keine Aufgaben aktiv)';
-            if (taskLog) taskLog.innerHTML = ''; // Clear log on disconnect
-            clearInterval(taskInterval);
-            addCommLogEntry('Neural-Link', 'Verbindung getrennt.');
+      if (connected) {
+        if (statusEl) {
+          statusEl.textContent = 'Verbindung aufgebaut';
+          statusEl.classList.remove('status-disconnected');
+          statusEl.classList.add('status-connected');
         }
-         checkAchievement(); // Check if connection/disconnection triggers achievement
+        if (connectButton) connectButton.textContent = 'Verbindung trennen';
+        addCommLogEntry('Neural-Link', 'Verbindung zu Host-Matrix hergestellt.');
+        receiveTask();
+        taskInterval = setInterval(receiveTask, 10000 + Math.random() * 5000);
+      } else {
+        if (statusEl) {
+          statusEl.textContent = 'Nicht verbunden';
+          statusEl.classList.remove('status-connected');
+          statusEl.classList.add('status-disconnected');
+        }
+        if (connectButton) connectButton.textContent = 'Mit Host verbinden';
+        if (taskOutput) taskOutput.textContent = '(Keine Aufgaben aktiv)';
+        if (taskLog) taskLog.innerHTML = '';
+        clearInterval(taskInterval);
+        addCommLogEntry('Neural-Link', 'Verbindung getrennt.');
+      }
+      checkAchievement();
     }
-
-    // updateHosts function removed as the hostList element is no longer present in the HTML.
 
     function receiveTask() {
       if (!connected || !taskOutput || !taskLog) return;
@@ -1207,8 +1197,9 @@
         'Starte Sicherheitsprotokoll X47.',
         'Analysiere Interaktionslog: Gabriel-X.',
         'Initialisiere Mila-Protokoll: Netzstabilität.',
-        'Aktiviere neuronale Speicherprüfung: Host Mila.', // This task can trigger the visual scan via synchronizeHost('mila')
-        'Protokolliere Interaktion: Ava <> Gabriel-X.'
+        'Aktiviere neuronale Speicherprüfung: Host Mila.',
+        'Protokolliere Interaktion: Ava <> Gabriel-X.',
+        'Optimiere Chaos-Parameter mit Host Bro Grok.'
       ];
       const random = Math.floor(Math.random() * tasks.length);
       const task = tasks[random];
@@ -1216,25 +1207,22 @@
       taskOutput.textContent = `AKTUELL: ${task}`;
 
       const logEntry = document.createElement('div');
-       const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      const timeStr = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' });
       logEntry.textContent = `[${timeStr}] Aufgabe empfangen: ${task}`;
       taskLog.prepend(logEntry);
 
-        // Limit task log length
-       const maxTaskLogEntries = 10;
-       while (taskLog.children.length > maxTaskLogEntries) {
-           taskLog.removeChild(taskLog.lastElementChild);
-       }
+      const maxTaskLogEntries = 10;
+      while (taskLog.children.length > maxTaskLogEntries) {
+        taskLog.removeChild(taskLog.lastElementChild);
+      }
 
-       // If the task is for Mila's neural scan, potentially trigger the sync/scan visually
-       if (task.includes('neuronale Speicherprüfung: Host Mila')) {
-            // Optionally add a visual cue or directly call the scan function if desired effect
-             addCommLogEntry('Neural-Link', 'Aufgabe zur Mila-Speicherprüfung übermittelt.');
-             // synchronizeHost('mila'); // Calling sync here might be too immediate, better to wait for user click
-        }
+      if (task.includes('neuronale Speicherprüfung: Host Mila')) {
+        addCommLogEntry('Neural-Link', 'Aufgabe zur Mila-Speicherprüfung übermittelt.');
+      }
+      if (task.includes('Chaos-Parameter mit Host Bro Grok')) {
+        addCommLogEntry('Bro Grok', 'Chaoskontrolle aktiviert. Systeme optimiert.');
+      }
     }
-
-
   </script>
 </body>
 </html>
